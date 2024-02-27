@@ -27,12 +27,12 @@ class Textbook {
     + toString(): String
 }
 
-Course "1" o-- "*" Instructor
-Course "1" o-- "*" Textbook
+Course o-- Instructor
+Course o-- Textbook
 class Course {
     ~ name: String
-    ~ instructors: ArrayList<Instructor>
-    ~ textbooks: ArrayList<Textbook>
+    ~ instructors: ArrayList<Instructor> [*]
+    ~ textbooks: ArrayList<Textbook> [*]
     + Course(): Course
     + getName(): String
     + setName(name: String): void
