@@ -10,11 +10,11 @@ class File {
 }
 
 
-Folder "1" *-- "*" File
+Folder *-- File
 class Folder {
     - name: String
-    - subfolders: ArrayList<Folder>
-    - files: ArrayList<File>
+    - subfolders: ArrayList<Folder> [*]
+    - files: ArrayList<File> [*]
     + Folder(): Folder
     + getName(): String
     + setName(name: String): void
