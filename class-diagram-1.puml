@@ -5,12 +5,20 @@ abstract class Employee {
     - firstName: String
     - lastName: String
     - socialSecurityNumber: String
+    + getFirstName(): String
+    + setFirstName(firstName: String): void
+    + getLastName(): String
+    + setLastName(lastName: String): void
+    + getSocialSecurityNumber(): String
+    + setSocialSecurityNumber(socialSecurityNumber: String): void
     + toString(): String
 }
 
 Employee <|-- SalariedEmployee
 class SalariedEmployee {
     - weeklySalary: int
+    + getWeeklySalary(): int
+    + setWeeklySalary(weeklySalary: int): void
     + toString(): String
 }
 
@@ -18,6 +26,10 @@ Employee <|-- HourlyEmployee
 class HourlyEmployee {
     - wage: int
     - hoursWorked: int
+    + getWage(): int
+    + setWage(wage: int): void
+    + getHoursWorked(): int
+    + setHoursWorked(hoursWorked: int): void
     + toString(): String
 }
 
@@ -25,12 +37,18 @@ Employee <|-- CommissionEmployee
 class CommissionEmployee {
     - commissionRate: int
     - grossSales: int
+    + getCommissionRate(): int
+    + setCommissionRate(commissionRate: int): void
+    + getGrossSales(): int
+    + setGrossSales(grossSales: int): void
     + toString(): String
 }
 
 Employee <|-- BaseEmployee
 class BaseEmployee {
     - baseSalary: int
+    + getBaseSalary(): int
+    + setBaseSalary(baseSalary: int): void
     + toString(): String
 }
 
